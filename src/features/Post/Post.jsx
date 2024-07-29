@@ -13,11 +13,11 @@ import {
    TiMessage,
 } from 'react-icons/ti';
 
-import shortenNumber from '../../utils/shortenNumber';
-import Comment from '../Comment/Comment';
-import Avatar from '../Avatar/Avatar';
+import shortenNumber from '../../utilities/shortenNumber.js';
+import Comment from '../Comment/Comment.jsx';
+import Avatar from '../Avatar/Avatar.jsx';
 
-import Card from '../../components/Card/Card';
+import Card from '../../components/Card.jsx';
 
 const Post = (props) => {
    const [voteValue, setVoteValue] = useState(0);

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { AnimatedList } from "react-animated-list";
+// import { AnimatedList } from "react-animated-list";
 import getRandomNumber from "../../utilities/getRandomNumber.js";
 import Post from "../Post/Post.jsx";
 import PostLoading from '../Post/PostLoading';
@@ -15,12 +15,13 @@ import "./Home.css";
 
 const Home = () => {
    const reddit = useSelector((state) => state.reddit);
-   const [isLoading, error, searchTerm, selectedSubreddit] = reddit;
+   const { isLoading, error, searchTerm, selectedSubreddit } = reddit;
    const posts = useSelector(selectFilteredPosts);
    const dispatch = useDispatch();
 
    useEffect(() => {
       dispatch(fetchPosts(selectedSubreddit));
+      // eslint-disable-next-line
    }, [selectedSubreddit]);
 
    const onToggleComments = (index) => {
@@ -33,9 +34,11 @@ const Home = () => {
 
    if (isLoading) {
       return (
-         <AnimatedList animation="zoom">
+         <>
+            {/* <AnimatedList animation="zoom"> */}
             {Array(getRandomNumber(3, 10)).fill(<PostLoading />)}
-         </AnimatedList>
+            {/* </AnimatedList> */}
+         </>
       );
    }
 

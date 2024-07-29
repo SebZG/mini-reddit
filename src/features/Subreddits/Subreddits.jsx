@@ -10,7 +10,7 @@ import {
    selectSelectedSubreddit,
 } from '../../store/redditSlice';
 
-import Card from '../../components/Card/Card';
+import Card from '../../components/Card.jsx';
 
 const Subreddits = () => {
    const dispatch = useDispatch();

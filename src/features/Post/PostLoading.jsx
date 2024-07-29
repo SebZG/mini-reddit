@@ -9,7 +9,7 @@ import {
    TiMessage,
 } from 'react-icons/ti';
 
-import getRandomNumber from '../../utils/getRandomNumber';
+import getRandomNumber from '../../utilities/getRandomNumber.js';
 
 const PostLoading = () => {
    return (
